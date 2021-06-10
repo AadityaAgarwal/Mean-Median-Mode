@@ -12,19 +12,37 @@ for i in range(len(fileData)):
     newData.append(float(newList))
 data=Counter(newData)
 mode={
-    '50-60':0,
-    '60-70':0,
-    '70-80':0,
+    '75-85':0,
+    '85-95':0,
+    '95-105':0,
+    '105-115':0,
+    '115-125':0,
+    '125-135':0,
+    '135-145':0,
+    '145-155':0,
+    '155-165':0,
+    '165-175':0
 }
 
 for h,occurance in data.items():
-    if 50<float(h)<60:
-        mode['50-60']+=occurance
-    elif 60<float(h)<70:
-        mode['60-70']+=occurance
-    elif 70<float(h)<80:
-        mode['70-80']+=occurance
-
+    if 75<float(h)<85:
+        mode['75-85']+=occurance
+    elif 85<float(h)<95:
+        mode['85-95']+=occurance
+    elif 95<float(h)<105:
+        mode['95-105']+=occurance
+    elif 115<float(h)<125:
+         mode['115-125']+=occurance
+    elif 125<float(h)<135:
+         mode['125-135']+=occurance
+    elif 135<float(h)<145:
+         mode['135-145']+=occurance
+    elif 145<float(h)<155:
+         mode['145-155']+=occurance
+    elif 155<float(h)<165:
+         mode['155-165']+=occurance
+    elif 165<float(h)<175:
+         mode['165-175']+=occurance
 modeRange,modeOccurance=0,0
 
 for range,occurance in mode.items():
